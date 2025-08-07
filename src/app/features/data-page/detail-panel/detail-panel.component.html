@@ -1,0 +1,52 @@
+<form [formGroup]="form()" (ngSubmit)="onSubmit()" class="detail-form">
+  <mat-form-field appearance="fill">
+    <mat-label>ID</mat-label>
+    <input matInput formControlName="id"  />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Name</mat-label>
+    <input matInput formControlName="name" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Subject</mat-label>
+    <input matInput formControlName="subject" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Grade</mat-label>
+    <input matInput type="number" formControlName="grade" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Date</mat-label>
+    <input matInput type="date" formControlName="date" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput type="email" formControlName="email" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Address</mat-label>
+    <input matInput formControlName="address" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>City</mat-label>
+    <input matInput formControlName="city" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Country</mat-label>
+    <input matInput formControlName="country" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>ZIP</mat-label>
+    <input matInput formControlName="zip" />
+  </mat-form-field>
+ 
+</form>

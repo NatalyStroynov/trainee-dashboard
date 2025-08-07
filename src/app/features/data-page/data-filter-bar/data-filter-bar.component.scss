@@ -1,0 +1,10 @@
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+
+  input {
+    width: 200px;
+  }
+}

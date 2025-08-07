@@ -1,0 +1,13 @@
+.toolbar-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-bottom: 16px;
+
+  button {
+    min-width: 180px;
+    text-transform: none;
+    font-weight: 500;
+    font-size: 14px;
+  }
+}

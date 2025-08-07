@@ -1,0 +1,24 @@
+<mat-toolbar class="page-toolbar" color="primary">
+  <span class="title">Trainee Dashboard</span>
+  <span class="spacer"></span>
+<div class="nav-links">
+  <a mat-raised-button
+     routerLink="/data"
+     routerLinkActive="active-link"
+     [routerLinkActiveOptions]="{ exact: true }">
+    Data
+  </a>
+
+  <a mat-raised-button
+     routerLink="/analysis"
+     routerLinkActive="active-link">
+    Analysis
+  </a>
+
+  <a mat-raised-button
+     routerLink="/monitor"
+     routerLinkActive="active-link">
+    Monitor
+  </a>
+  </div>
+</mat-toolbar>

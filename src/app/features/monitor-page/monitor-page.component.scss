@@ -1,0 +1,77 @@
+.monitor-wrapper {
+    padding: 24px;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+
+    h2 {
+        display: none;
+    }
+
+    .filter-form {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-row-gap: 12px;
+        grid-column-gap: 16px;
+        align-items: center;
+        margin-bottom: 24px;
+
+        mat-form-field {
+            width: 100%;
+        }
+
+        mat-checkbox {
+            --mdc-form-field-label-text-color: black;
+        }
+
+        .checkbox-group {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+            padding-top: 4px;
+        }
+    }
+
+    .monitor-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+
+        th,
+        td {
+            border: 1px solid #000;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #ffffff;
+            font-weight: bold;
+        }
+
+        tr.passed {
+            background-color: #00ff00;
+            /* ярко-зелёный */
+            color: #000;
+        }
+
+        tr.failed {
+            background-color: #ff0000;
+            /* ярко-красный */
+            color: #000;
+        }
+    }
+
+    .pagination-controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        margin-top: 16px;
+
+        button {
+            padding: 4px 12px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+    }
+}

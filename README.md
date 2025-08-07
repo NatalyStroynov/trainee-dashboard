@@ -1,27 +1,97 @@
-# TraineeDashboard
+# 🧑‍🎓 Trainee Dashboard
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
+A web-based dashboard to manage, filter, and visualize trainee performance. Built with Angular standalone components, signals, and Material UI.
 
-## Development server
+## 🚀 Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- 📄 Data table with pagination and filtering
+- 🔍 Filter by name, ID, subject, grade, and date
+- 📊 Charts for performance analysis (IDs and Subjects)
+- 🧪 Unit tests using Jasmine and Karma
+- 🧩 Modular component-based architecture
+- 🧼 Clear state management using Angular signals
 
-## Code scaffolding
+## 🛠 Tech Stack
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Angular 17+
+- Standalone Components
+- Angular Signals
+- TypeScript
+- Angular Material
+- RxJS
+- Jasmine + Karma (for unit tests)
 
-## Build
+## 📁 Project Structure
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```
+src/
+├── app/
+│   ├── features/
+│   │   ├── data-page/              # Main data view
+│   │   ├── monitor-page/           # Monitor with aggregate stats
+│   │   └── toggle-demo/            # Toggle showcase
+│   ├── services/
+│   │   ├── trainee-state.service.ts        # Central state for data-page
+│   │   └── monitor-state.service.ts        # Aggregated state logic
+│   ├── models/                    # Data models
+│   ├── mocks/                     # Mock data (MOCK_TRAINEES)
+│   ├── app.routes.ts             # App routes
+│   └── app.component.ts          # Root component
+```
 
-## Running unit tests
+## 🧪 Running Tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+ng test
+```
 
-## Running end-to-end tests
+Make sure you have `@types/jasmine` installed. If you see an error like `Cannot find name 'describe'`, run:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```bash
+npm install --save-dev @types/jasmine
+```
 
-## Further help
+## 🖥️ Development Server
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+ng serve
+```
+
+Navigate to: [http://localhost:4200](http://localhost:4200)
+
+## 📦 Build
+
+```bash
+ng build
+```
+
+Compiled files will be in the `dist/` directory.
+
+## ✍️ How to Add a Test
+
+To add a spec file manually:
+
+```bash
+ng generate service services/my-service --skip-tests=false
+```
+
+Or create it by hand next to the service:
+
+```ts
+// my-service.service.spec.ts
+describe('MyService', () => {
+  it('should create service', () => {
+    expect(true).toBeTrue();
+  });
+});
+```
+
+## 📌 Notes
+
+- Signals are used for state (no NgRx or global store)
+- Pagination resets automatically on filter change
+- Trainees are loaded from mock data (`MOCK_TRAINEES`)
+
+## 📄 License
+
+MIT

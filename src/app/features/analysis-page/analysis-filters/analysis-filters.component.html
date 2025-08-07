@@ -1,0 +1,16 @@
+<div class="filters">
+  <mat-form-field appearance="fill">
+    <mat-label>IDs</mat-label>
+    <mat-select [(ngModel)]="selectedIds" multiple (selectionChange)="onIdsChange()">
+      <mat-option *ngFor="let id of uniqueIds()" [value]="id">{{ id }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Subjects</mat-label>
+    <mat-select [(ngModel)]="selectedSubjects" multiple (selectionChange)="onSubjectsChange()">
+      <mat-option *ngFor="let subject of uniqueSubjects()" [value]="subject">{{ subject }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+

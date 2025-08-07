@@ -1,0 +1,11 @@
+<div class="filter-group">
+  <span>Filter:</span>
+  <input
+    matInput
+    type="text"
+    placeholder="ID: ###"
+    [ngModel]="searchText"
+    (ngModelChange)="onSearchChange($event)"
+  />
+ 
+</div>

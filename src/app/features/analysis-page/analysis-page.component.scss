@@ -1,0 +1,37 @@
+.top-zone {
+   display: flex;
+  gap: 16px;
+  margin-bottom: 32px; 
+
+  .chart-slot {
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #fafafa;
+    padding: 8px;
+  }
+  .half {
+    flex: 1 1 50%;
+  }
+}
+
+.bottom-zone {
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+   margin-top: 68px;
+
+  app-hidden-chart-button {
+     width: 100%;
+    display: block;
+    padding: 16px;
+    border: 2px dashed #999;
+    min-height: 100px;
+    background-color: #f5f5f5;
+    box-sizing: border-box;
+    cursor:grab
+  }
+  .full {
+    width: 100%;
+  }
+}

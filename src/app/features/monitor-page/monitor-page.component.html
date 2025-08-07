@@ -1,0 +1,57 @@
+<div class="monitor-wrapper">
+    <h2>Monitor Page</h2>
+
+    <form class="filter-form">
+        <mat-form-field>
+            <mat-label>IDs</mat-label>
+            <mat-select multiple [value]="filters().ids" (valueChange)="updatePatch({ ids: $event })" name="ids">
+                <mat-option *ngFor="let id of allIds()" [value]="id">{{ id }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Names</mat-label>
+            <input matInput [(ngModel)]="filters().name" (input)="updatePatch({ name: $any($event.target).value })"
+                name="name" />
+        </mat-form-field>
+
+        <label class="filter-label">State:</label>
+        <div class="checkbox-group">
+            <mat-checkbox [checked]="filters().showFailed" class="black-label"
+                (change)="updatePatch({ showFailed: $event.checked })">
+                Failed
+            </mat-checkbox>
+            <mat-checkbox [checked]="filters().showPassed" class="black-label"
+                (change)="updatePatch({ showPassed: $event.checked })">
+                Passed
+            </mat-checkbox>
+        </div>
+    </form>
+
+    <table class="monitor-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Average</th>
+                <th>Exams</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let trainee of  trainees()"
+                [ngClass]="{'passed': trainee.average >= 65, 'failed': trainee.average < 65}">
+                <td>{{ trainee.id }}</td>
+                <td>{{ trainee.name }}</td>
+                <td>{{ trainee.average }}</td>
+                <td>{{ trainee.exams }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="pagination-controls">
+        <button (click)="prevPage()" [disabled]="pageIndex() === 0">Previous</button>
+        <span>Page {{ pageIndex() + 1 }} / {{ totalPages() }}</span>
+        <button (click)="nextPage()" [disabled]="(pageIndex() + 1) >= totalPages()">Next</button>
+    </div>
+
+</div>

@@ -1,0 +1,16 @@
+<app-data-filter-bar></app-data-filter-bar>
+
+<div class="data-layout">
+    <div class="data-grid">
+        <app-data-table [trainees]="pagedTrainees()"></app-data-table>
+        <div class="pagination-controls">
+            <button (click)="prevPage()" [disabled]="pageIndex() === 0">Previous</button>
+            <span>Page {{ pageIndex() + 1 }} / {{ totalPages() }}</span>
+            <button (click)="nextPage()" [disabled]="(pageIndex() + 1) >= totalPages()">Next</button>
+        </div>
+    </div>
+    <div class="detail-panel">
+        <app-form-toolbar></app-form-toolbar>
+        <app-detail-panel> </app-detail-panel>
+    </div>
+</div>
